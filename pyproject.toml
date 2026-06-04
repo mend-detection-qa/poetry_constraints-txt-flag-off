@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "poetry-constraints-txt-flag-off"
+version = "0.1.0"
+description = "Probe: poetry project with constraints.txt at root, applyConstraints=false (PRD-8924 / SCA-5467, sibling of -overlay)"
+authors = ["Mend QA <qa@mend.io>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "2.32.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

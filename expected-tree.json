@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "pm": "poetry",
+  "pm_version_tested": "1.8.0",
+  "source_file": "https://github.com/mend-detection-qa/poetry_constraints-txt-flag-off/blob/main/pyproject.toml",
+  "root": {
+    "name": "poetry-constraints-txt-flag-off",
+    "version": "0.1.0",
+    "dependencies": [
+      {
+        "name": "requests",
+        "version": "2.32.0",
+        "scope": "main",
+        "direct": true,
+        "dependencies": [
+          {
+            "name": "certifi",
+            "version": "2026.4.22",
+            "scope": "main",
+            "direct": false,
+            "dependencies": []
+          },
+          {
+            "name": "charset-normalizer",
+            "version": "3.4.7",
+            "scope": "main",
+            "direct": false,
+            "dependencies": []
+          },
+          {
+            "name": "idna",
+            "version": "3.15",
+            "scope": "main",
+            "direct": false,
+            "dependencies": []
+          },
+          {
+            "name": "urllib3",
+            "version": "2.7.0",
+            "scope": "main",
+            "direct": false,
+            "mediation": "UNCONSTRAINED. constraints.txt is present in the repo (pinning urllib3==1.26.18) but python.applyConstraints=false in whitesource.config, so Mend must ignore it. poetry.lock's unconstrained value (urllib3==2.7.0) wins. Gate-proof negative case — sibling of poetry_constraints-txt-overlay.",
+            "dependencies": []
+          }
+        ]
+      }
+    ]
+  },
+  "summary": {
+    "total_packages": 5,
+    "direct_dependencies": 1,
+    "transitive_dependencies": 4,
+    "constraint_applied": "NONE (applyConstraints=false). constraints.txt is present but Mend must ignore it.",
+    "scopes_included": ["main"],
+    "notes": "Sibling of poetry_constraints-txt-overlay. Identical project content; only the applyConstraints flag differs. Pair establishes that the gate is the sole control."
+  }
+}
